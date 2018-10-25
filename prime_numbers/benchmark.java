@@ -51,7 +51,7 @@ class PrimeNumbersBenchmarkApp {
             System.out.format("Found %d prime numbers.\n", res.size());
         }
 
-        long estimatedTime = System.currentTimeMillis() - startTime;
-        System.out.format("Execution time: %d.\n", (estimatedTime/1000));
+        double estimatedTime = (double)System.currentTimeMillis() - (double)startTime;
+        System.out.format("Execution time: %f.\n", ((double) estimatedTime/1000));
     }
 }
