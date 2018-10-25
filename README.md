@@ -2,264 +2,143 @@ benchmarks_scripts
 ==================
 
 Repo para guardar scripts para hacer benchmarks a los lenguajes de programación mas populares
-<br/>
-<br/>
-Les dejo los resultados en mi maquina(MacBook Pro 15-inch late 2011, con 16GB de RAM):
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ /usr/local/zend/bin/php benchmark.php 
-<br/>
+
+Les dejo los resultados en mi maquina(MacBook Pro (Retina, 15-inch, Mid 2014), con 16GB de RAM, macOS Mojave 10.14):
+
+---
+
+- PHP 7.2.11 (cli) (built: Oct 11 2018 16:23:09) ( NTS )
+```bash
+php benchmark.php
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Execution time: 60
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ python2.7 benchmark.py 
-<br/>
+Execution time: 19
+```
+---
+
+- Python 2.7.15
+```bash
+python2.7 benchmark.py
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
 ('Found', 664579, 'prime numbers.')
-<br/>
-('Execution time:', 29.52649998664856)
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ python3.3 benchmark.py 
-<br/>
+('Execution time:', 20.122681140899658)
+```
+---
+
+- Python 3.7.0
+```bash
+python3.7 benchmark.py
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Execution time: 21.81986093521118
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ python3.4 benchmark.py 
-<br/>
+Execution time: 19.33597683906555
+```
+---
+
+- C++, Apple LLVM version 10.0.0 (clang-1000.11.45.2)
+```bash
+g++ benchmark.cpp -o benchmark.sh && ./benchmark.sh && rm -Rf ./benchmark.sh
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Execution time: 24.26309895515442
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ ~/Downloads/pypy
-<br/>
-pypy-2.3.1-osx64/  pypy3-2.3.1-osx64/ 
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ ~/Downloads/pypy-2.3.1-osx64/bin/pypy benchmark.py
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Found', 664579, 'prime numbers.')
-<br/>
-('Execution time:', 1.7521071434020996)
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ ~/Downloads/pypy3-2.3.1-osx64/bin/pypy benchmark.py
-<br/>
+Execution time: 2.00 seconds.
+```
+---
+
+- NodeJS, v8.11.4
+```bash
+node benchmark.js
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Execution time: 1.8719539642333984
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ g++ benchmark.cpp -o benchmark.sh
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ ./benchmark.sh 
-<br/>
+Execution time: 2.333
+```
+
+---
+
+- Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
+```bash
+javac benchmark.java && java -classpath ./ PrimeNumbersBenchmarkApp && rm -Rf *.class
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Execution time: 3.00 seconds.
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ node benchmark.js 
-<br/>
+Execution time: 2.
+```
+---
+
+- ruby 2.5.1p57 (2018-03-29 revision 63029) \[x86_64-darwin18]
+```bash
+ruby benchmark.rb
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers
-<br/>.
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Execution time: 4.458
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ javac benchmark.java 
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ java -classpath ./ PrimeNumbersBenchmarkApp
-<br/>
 Found 664579 prime numbers.
-<br/>
+Execution time: 12.201945.
+```
+---
+
+- go version go1.11.1 darwin/amd64
+```bash
+go run benchmark.go
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
 Found 664579 prime numbers.
-<br/>
-Execution time: 7.
-<br/>
-<br/>
-elberts-mbp:Desktop elbertcastaneda$ ruby benchmark.rb 
-<br/>
 Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Found 664579 prime numbers.
-<br/>
-Execution time: 13.478766.
-<br/>
-<br/>
+Execution time:  0.964141594
+```
