@@ -58,5 +58,5 @@ func main() {
 	}
 
 	var duration = time.Since(startTime)
-	fmt.Println(duration.Seconds())
+	fmt.Println("Execution time: ", duration.Seconds())
 }
