@@ -19,16 +19,10 @@ void get_primes7(int n, vector<int> &res)
         return;
     }
     vector<int> s;
-    // 1 //s.reserve(n/2); // hint the compiler that we will use "n/2" elements in "s"
-    // 2 //s.resize( static_cast<int>(n/2) ); // pre-allocate memory
-    // 2 //int j = 0;
     for (int i = 3; i < n + 1; i += 2)
     {
         s.push_back(i);
-        // 2 //s[j] = i;
-        // 2 //++j;
     }
-    // 2 //s.resize(j);
     int mroot = sqrt(n);
     int half = static_cast<int>(s.size());
     int i = 0;
@@ -48,17 +42,8 @@ void get_primes7(int n, vector<int> &res)
         i = i + 1;
         m = 2 * i + 3;
     }
-    // 1 //res.reserve(n/log(n)); // "Prime number theorem" says that we expect this amount of primes
+    
     res.push_back(2);
-
-    // loop manually
-//    for (vector<int>::iterator it = s.begin(); it < s.end(); ++it)
-//    {
-//        if (*it)
-//        {
-//            res.push_back(*it);
-//        }
-//    }
 
     // use standard methods instead of a loop
     std::vector<int>::iterator pend = std::remove(s.begin(), s.end(), 0);
@@ -68,8 +53,7 @@ void get_primes7(int n, vector<int> &res)
 int main()
 {
 #include <time.h>
-    time_t start, end;
-    time(&start);
+    time_t start = clock();
 
     for (int i = 1; i <= 10; ++i)
     {
@@ -78,8 +62,8 @@ int main()
         printf("Found %d prime numbers.\n", (int) res.size());
     }
 
-    time(&end);
-    double dif = difftime(end, start);
+    double dif = float(clock() - start) / CLOCKS_PER_SEC;
+
     printf("Execution time: %.2lf seconds.\n", dif);
 
     return 0;

@@ -71,7 +71,7 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Found 664579 prime numbers.
 Found 664579 prime numbers.
-Execution time: 2.00 seconds.
+Execution time: 2.08 seconds.
 ```
 ---
 
