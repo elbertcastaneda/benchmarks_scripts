@@ -106,7 +106,7 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Found 664579 prime numbers.
 Found 664579 prime numbers.
-Execution time: 2.
+Execution time: 3.316000.
 ```
 ---
 
