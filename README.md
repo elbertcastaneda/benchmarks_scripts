@@ -90,7 +90,23 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Execution time: 2.333
 ```
+---
 
+- NodeJS, v11.4.0
+```bash
+node benchmark.js
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 1.769
+```
 ---
 
 - Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
@@ -141,4 +157,21 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Found 664579 prime numbers.
 Execution time:  0.964141594
+```
+---
+
+- dart version 2.1.0 (Tue Nov 13 18:22:02 2018 +0100) on "macos_x64"
+```bash
+dart benchmark.dart 
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 2.122
 ```
