@@ -31,7 +31,7 @@ List<int> get_primes7(int n) {
 
     while (m <= mroot) {
         if (s[i] != 0) {
-            int j = ((m*m-3)/2).floor();   // int div
+            int j = ((m * m - 3) / 2).floor();   // int div
             s[j] = 0;
             while (j < half) {
                 s[j] = 0;
@@ -39,7 +39,7 @@ List<int> get_primes7(int n) {
             }
         }
         i = i + 1;
-        m = 2*i + 3;
+        m = 2 * i + 3;
     }
 
     var res = [2];

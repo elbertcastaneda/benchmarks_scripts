@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 public class Program
 {
-    private static void get_primes7(int n, List<int> res)
+    private static List<int> get_primes7(int n)
     {
-        if (n < 2) return;
+        List<int> res = new List<int>();
+        if (n < 2) return res;
         if (n == 2)
         {
             res.Add(2);
-            return;
+            return res;
         }
 
         List<int> s = new List<int>();
@@ -26,7 +27,7 @@ public class Program
         {
             if (s[i] != 0)
             {
-                int j = (int)((m * m - 3) * 0.5);
+                int j = (int)((m * m - 3) / 2);
                 s[j] = 0;
                 while (j < half)
                 {
@@ -41,6 +42,8 @@ public class Program
         res.Add(2);
         s.RemoveAll(item => item == 0);
         res.AddRange(s);
+
+        return res;
     }
 
     public static void Main(string[] args)
@@ -48,8 +51,7 @@ public class Program
         Stopwatch stopWatch = new Stopwatch();
         stopWatch.Start();
         for (var i = 0; i < 10; i++) {
-            List<int> res = new List<int>();
-            get_primes7(10000000, res);
+            var res = get_primes7(10000000);
             Console.Write("Found {0} prime numbers.\n", res.Count);
         }
         stopWatch.Stop();
