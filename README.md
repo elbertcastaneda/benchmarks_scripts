@@ -175,3 +175,20 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Execution time: 2.122
 ```
+
+- dotnet version 2.2.105 (Commit: 7cecb35b92, C#: 7.3) on "macos_x64"
+```bash
+dotnet tool install -g dotnet-script
+dotnet script benchmark.cs
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 1.299
+```
