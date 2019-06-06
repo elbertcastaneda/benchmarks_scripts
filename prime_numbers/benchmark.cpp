@@ -52,7 +52,7 @@ void get_primes7(int n, vector<int> &res)
 
 int main()
 {
-#include <time.h>
+    #include <time.h>
     time_t start = clock();
 
     for (int i = 1; i <= 10; ++i)
