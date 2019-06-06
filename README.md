@@ -192,3 +192,19 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Execution time: 1.299
 ```
+
+- Vala 0.44.4 on "macos_x64"
+```bash
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/opt/libffi/lib/pkgconfig" && vala --pkg gee-0.8 benchmark.vala && rm -Rf benchmark.vala.c
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 2.342681.
+```
