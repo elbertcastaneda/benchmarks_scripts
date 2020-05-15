@@ -1,9 +1,8 @@
-<?php
+<?hh
 error_reporting(E_ALL);
-ini_set('memory_limit', '1024M');
 ini_set('display_errors', '1');
 
-function get_primes7($n) {
+function get_primes7(float $n) {
     if ($n < 2) return array();
     if ($n == 2) return array(2);
     $s = range(3, $n, 2);
@@ -35,7 +34,7 @@ function get_primes7($n) {
 $start = strtotime('now');
 $res = array();
 for ($i = 1; $i <= 10; ++$i) {
-    $res = get_primes7(10000000);
+    $res = get_primes7((float)10000000);
     print "Found ".count($res)." prime numbers.\n";
 }
 
