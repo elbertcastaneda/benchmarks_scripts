@@ -39,21 +39,22 @@ class PrimeNumbersGenerator {
 
         return res;
     }
-}
 
+    public static int main (string[] args) {
 
-int main (string[] args) {
+        int64 startTime = GLib.get_real_time();
 
-    int64 startTime = GLib.get_real_time ();
+        ArrayList<int> res;
+        PrimeNumbersGenerator gen = new PrimeNumbersGenerator();
 
-    ArrayList<int> res;
-    for (int i = 1; i <= 10; ++i) {
-        res = (new PrimeNumbersGenerator()).getPrimes7(10000000);
-        stdout.printf("Found %d prime numbers.\n", res.size);
+        for (int i = 1; i <= 10; ++i) {
+            res = gen.getPrimes7(10000000);
+            stdout.printf("Found %d prime numbers.\n", res.size);
+        }
+
+        int64 estimatedTime = GLib.get_real_time() - startTime;
+        stdout.printf("Execution time: %f.\n", ((double) estimatedTime/1000) / 1000);
+
+        return 0;
     }
-
-    int64 estimatedTime = GLib.get_real_time () - startTime;
-    stdout.printf("Execution time: %f.\n", ((double) estimatedTime/1000) / 1000);
-
-    return 0;
 }
