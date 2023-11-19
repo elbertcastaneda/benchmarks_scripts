@@ -290,3 +290,71 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Execution time: 2.278723654s
 ```
+
+---
+
+- Apple clang version 15.0.0 (clang-1500.0.40.1)
+
+```bash
+gcc -o benchmark benchmark.c && ./benchmark && rm -Rf ./benchmark                                                                                   3103ms  Wed 20:54
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Execution time: 0.69 seconds (withFixedEstimation).
+
+
+---
+
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Execution time: 0.67 seconds (withManualEstimation).
+```
+
+---
+
+- gcc-13 (Homebrew GCC 13.2.0) 13.2.0
+
+```bash
+gcc-13 -o benchmark benchmark.c && ./benchmark && rm -Rf ./benchmark                                                                                                                        Wed 20:55
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Found 664579 prime numbers (withFixedEstimation).
+Execution time: 0.74 seconds (withFixedEstimation).
+
+
+---
+
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Found 664579 prime numbers (withManualEstimation).
+Execution time: 0.70 seconds (withManualEstimation).
+```
