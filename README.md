@@ -67,7 +67,7 @@ Execution time: 19.33597683906555
 - C++, Apple LLVM version 10.0.0 (clang-1000.11.45.2)
 
 ```bash
-g++ benchmark.cpp -o benchmark.sh && ./benchmark.sh && rm -Rf ./benchmark.sh
+g++ benchmark.cpp -o benchmark && ./benchmark && rm -Rf ./benchmark
 Found 664579 prime numbers.
 Found 664579 prime numbers.
 Found 664579 prime numbers.
@@ -120,6 +120,7 @@ Execution time: 1.769
 ```
 
 ---
+
 - NodeJS, v18.17.1
 
 ```bash

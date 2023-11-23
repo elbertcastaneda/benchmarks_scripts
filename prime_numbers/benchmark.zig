@@ -1,3 +1,4 @@
+// This file is not working yet, am working on it
 const std = @import("std");
 
 fn getPrimes7ManualEstimation(n: i32, res: **i32, count: *i32) !void {
