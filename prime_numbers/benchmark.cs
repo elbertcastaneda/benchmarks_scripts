@@ -7,6 +7,7 @@ public class Program
     {
         List<int> res = new List<int>();
         if (n < 2) return res;
+
         if (n == 2)
         {
             res.Add(2);
@@ -23,6 +24,7 @@ public class Program
         int half = s.Count;
         int i = 0;
         int m = 3;
+
         while (m <= mroot)
         {
             if (s[i] != 0)
@@ -35,6 +37,7 @@ public class Program
                     j += m;
                 }
             }
+
             i = i + 1;
             m = 2 * i + 3;
         }
@@ -55,10 +58,9 @@ public class Program
             Console.Write("Found {0} prime numbers.\n", res.Count);
         }
         stopWatch.Stop();
-        Console.Write(string.Format(
-            "Execution time: {0}\n",
-             Math.Round(stopWatch.Elapsed.TotalSeconds, 3).ToString()
-        ));
+
+        var totalSeconds = Math.Round(stopWatch.Elapsed.TotalSeconds, 3);
+        Console.Write($"Execution time: {totalSeconds}\n");
     }
 }
 
