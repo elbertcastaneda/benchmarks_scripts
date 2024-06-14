@@ -178,6 +178,25 @@ Execution time: 3.316000.
 
 ---
 
+- kotlinc-jvm 2.0.0 (JRE 21.0.3+7-LTS-152)
+
+```bash
+kotlinc benchmark.kt -include-runtime -d PrimeNumbersBenchmarkApp.jar && java -jar PrimeNumbersBenchmarkApp.jar && rm -f PrimeNumbersBenchmarkApp.jar
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 2.608 seconds.
+```
+
+---
+
 - ruby 2.5.1p57 (2018-03-29 revision 63029) \[x86_64-darwin18]
 
 ```bash
@@ -193,6 +212,44 @@ Found 664579 prime numbers.
 Found 664579 prime numbers.
 Found 664579 prime numbers.
 Execution time: 12.201945.
+```
+
+---
+
+- ruby 3.3.2 (2024-05-30 revision e5a195edf6) \[x86_64-linux]
+
+```bash
+ruby benchmark.rb
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 7.974534324.
+```
+
+---
+
+- jruby 9.4.7.0 (3.1.4) 2024-04-29 597ff08ac1 Java HotSpot(TM) 64-Bit Server VM 21.0.3+7-LTS-152 on 21.0.3+7-LTS-152 +jit \[x86_64-linux]
+
+```bash
+jruby benchmark.rb
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 13.306539.
 ```
 
 ---
