@@ -197,6 +197,26 @@ Execution time: 2.608 seconds.
 
 ---
 
+- Welcome to Scala 3.4.2 (21.0.3, Java Java HotSpot(TM) 64-Bit Server VM).
+
+```bash
+scalac benchmark.scala && scala PrimeNumbersBenchmarkApp && rm -Rf *.class *.tasty
+
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Found 664579 prime numbers.
+Execution time: 3.18 seconds.
+```
+
+---
+
 - ruby 2.5.1p57 (2018-03-29 revision 63029) \[x86_64-darwin18]
 
 ```bash
